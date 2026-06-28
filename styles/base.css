@@ -1,0 +1,92 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Center main content */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header styling */
+#course-title,
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#course-title {
+  display: block;
+  background-color: rgb(9, 109, 143);
+  padding: 1rem;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  background-color: rgb(9, 109, 143);
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+nav a:hover {
+  background-color: rgb(9, 109, 143);
+}
+
+/* Your Name Styling */
+h1 {
+  background-color: white;
+  padding: 1rem;
+}
+
+/* Card Sections */
+.card {
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+/* About Me background */
+.card:first-of-type {
+  background-color: rgb(9, 109, 143);
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start; /* instead of center */
+  gap: 20px;
+}
+
+/* Profile Image */
+.profile {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column; /* stacks paragraphs vertically */
+  text-align: left;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(9, 109, 143);
+  padding: 1rem;
+}
