@@ -1,0 +1,20 @@
+@media screen and (min-width: 700px) {
+
+  /* Hide hamburger */
+  #menuBtn {
+    display: none;
+  }
+
+  /* Show nav inline */
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  /* Grid becomes 3 columns */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
