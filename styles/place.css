@@ -28,11 +28,11 @@ header {
     text-align: center;
 }
 
-/* HERO IMAGE (CENTERED) */
+/* HERO IMAGE */
 picture {
     display: block;
     max-width: 900px;
-    margin: 20px auto; /* centers image */
+    margin: 20px auto;
 }
 
 picture img {
@@ -42,7 +42,7 @@ picture img {
     border-radius: 8px;
 }
 
-/* MAIN CONTAINER (CENTERED) */
+/* MAIN CONTAINER */
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -50,11 +50,6 @@ picture img {
 
     display: grid;
     gap: 30px;
-}
-
-/* CONTENT CENTERING */
-.content {
-    text-align: center;
 }
 
 /* SECTIONS */
@@ -69,7 +64,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* WEATHER ICON */
+/* WEATHER ICON (MOBILE) */
 .weather img {
     width: 50px;
     margin-bottom: 10px;
@@ -89,18 +84,18 @@ footer {
 /* ========================= */
 @media (min-width: 768px) {
 
-    /* Keep centered but allow side-by-side */
     .container {
         grid-template-columns: 1fr 1fr;
         align-items: start;
     }
 
-    section {
-        text-align: center; /* keep centered */
+    /* ✅ REQUIRED PSEUDO-ELEMENT */
+    .weather h2::after {
+        content: " ⛅";
     }
 
-    .content {
-        text-align: left; /* better readability on desktop */
+    /* Hide SVG in desktop */
+    .weather img {
+        display: none;
     }
-    
 }
