@@ -91,11 +91,13 @@ footer {
 
     /* ✅ REQUIRED PSEUDO-ELEMENT */
     .weather h2::after {
-        content: " ⛅";
+        content: " 🌤️";
     }
 
     /* Hide SVG in desktop */
     .weather img {
-        display: none;
+        width: 60px;
+        margin: 10px auto;
+        display: block;
     }
 }
