@@ -11,35 +11,37 @@
 </head>
 
 <body>
-  <header>
-    <h1>Japan</h1>
-  </header>
+    <header>
+        <h1>Japan</h1>
+    </header>
 
-  <!-- HERO IMAGE -->
-  <picture>
-    <source srcset="images/small.webp" media="(max-width: 500px)">
-    <source srcset="images/medium.webp" media="(max-width: 1000px)">
-    <img src="images/medium.webp" alt="Scenic view of place" width="1000" height="675">
-  </picture>
+    <picture>
+        <source srcset="images/small.webp" media="(max-width: 500px)">
+        <source srcset="images/medium.webp" media="(max-width: 1000px)">
+        <img src="images/medium.webp" alt="Mount Fuji in Japan" width="1000" height="675">
+    </picture>
 
-  <main>
-    <section>
-      <h2>About</h2>
-      <p>Mount Fuji is Japan's highest mountain, standing at 3,776 meters (12,389 feet). Located on Honshu island about 100 km southwest of Tokyo, this active stratovolcano is renowned for its nearly perfect symmetrical cone, which remains snow-capped for approximately five months each year.</p>
-    </section>
+    <main class="container">
+        <section class="about">
+            <h2>About</h2>
+            <p>
+                Mount Fuji is Japan's highest mountain, standing at 3,776 meters.
+                It is known for its beautiful symmetrical shape and snow-capped peak.
+            </p>
+        </section>
 
-    <section class="weather">
-      <h2>Weather</h2>
-      <img src="images/weather.svg" alt="weather icon">
-      <p>Temperature: <span id="temp">8</span>°C</p>
-      <p>Wind Speed: <span id="wind">10</span> km/h</p>
-      <p>Wind Chill: <span id="windchill"></span></p>
-    </section>
-  </main>
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="weather icon">
+            <p>Temperature: <span id="temp">8</span>°C</p>
+            <p>Wind Speed: <span id="wind">10</span> km/h</p>
+            <p>Wind Chill: <span id="windchill"></span></p>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> 🗻Wenndey Mae Ubatay, Philippines🗻</p>
-    <p>Last Modified: <span id="modified"></span></p>
-  </footer>
+    <footer>
+        <p>&copy; <span id="year"></span> Wenndey Mae Ubatay, Philippines</p>
+        <p>Last Modified: <span id="modified"></span></p>
+    </footer>
 </body>
 </html>

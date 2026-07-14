@@ -1,27 +1,106 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL VARIABLES */
 :root {
-  --primary: #003049;
-  --accent: #f77f00;
-  --light: #fdf0d5;
+    --main-color: #c36e65;
+    --text-color: #333;
+    --bg-color: #ffffff;
 }
 
-main {
-  display: grid;
-  gap: 1rem;
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
+/* HEADER */
+header {
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* HERO IMAGE (CENTERED) */
+picture {
+    display: block;
+    max-width: 900px;
+    margin: 20px auto; /* centers image */
+}
+
+picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* MAIN CONTAINER (CENTERED) */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+
+    display: grid;
+    gap: 30px;
+}
+
+/* CONTENT CENTERING */
+.content {
+    text-align: center;
+}
+
+/* SECTIONS */
+section {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* HEADINGS */
+h2 {
+    margin-bottom: 10px;
+}
+
+/* WEATHER ICON */
+.weather img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--main-color);
+    color: white;
+    margin-top: 20px;
+}
+
+/* ========================= */
+/* DESKTOP VIEW */
+/* ========================= */
 @media (min-width: 768px) {
-  main {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
-/* Weather icon (large view only) */
-@media (min-width: 768px) {
-  .weather h2::after {
-    content: " ⛅";
-  }
+    /* Keep centered but allow side-by-side */
+    .container {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
 
-  .weather img {
-    display: none; /* hide SVG on large view */
-  }
+    section {
+        text-align: center; /* keep centered */
+    }
+
+    .content {
+        text-align: left; /* better readability on desktop */
+    }
+    
 }
