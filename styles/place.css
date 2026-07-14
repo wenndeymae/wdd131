@@ -9,7 +9,7 @@
 :root {
     --main-color: #c36e65;
     --text-color: #333;
-    --bg-color: #ffffff;
+    --bg-color: white;
 }
 
 /* BODY */
@@ -23,7 +23,7 @@ body {
 /* HEADER */
 header {
     background-color: var(--main-color);
-    color: white;
+    color: var(--bg-color);
     padding: 20px;
     text-align: center;
 }
@@ -75,7 +75,7 @@ footer {
     text-align: center;
     padding: 15px;
     background-color: var(--main-color);
-    color: white;
+    color: var(--bg-color);
     margin-top: 20px;
 }
 
