@@ -16,7 +16,6 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -64,7 +63,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* WEATHER ICON (MOBILE) */
+/* WEATHER ICON */
 .weather img {
     width: 50px;
     margin-bottom: 10px;
@@ -89,7 +88,7 @@ footer {
         align-items: start;
     }
 
-    /* ✅ REQUIRED PSEUDO-ELEMENT */
+    /* PSEUDO-ELEMENT */
     .weather h2::after {
         content: " 🌤️";
     }
