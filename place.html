@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Place</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Japan</h1>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <picture>
+    <source srcset="images/small.webp" media="(max-width: 500px)">
+    <source srcset="images/medium.webp" media="(max-width: 1000px)">
+    <img src="images/medium.webp" alt="Scenic view of place" width="1000" height="675">
+  </picture>
+
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>Mount Fuji is Japan's highest mountain, standing at 3,776 meters (12,389 feet). Located on Honshu island about 100 km southwest of Tokyo, this active stratovolcano is renowned for its nearly perfect symmetrical cone, which remains snow-capped for approximately five months each year.</p>
+    </section>
+
+    <section class="weather">
+      <h2>Weather</h2>
+      <p>Temperature: <span id="temp">8</span>°C</p>
+      <p>Wind Speed: <span id="wind">10</span> km/h</p>
+      <p>Wind Chill: <span id="windchill"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> 🗻Wenndey Mae Ubatay, Philippines🗻</p>
+    <p>Last Modified: <span id="modified"></span></p>
+  </footer>
+</body>
+</html>
