@@ -7,7 +7,7 @@
 
 /* GLOBAL VARIABLES */
 :root {
-    --main-color: #c36e65;
+    --main-color: #7a2e2a;
     --text-color: #333333;
     --bg-color: #ffffff;
 }
@@ -15,8 +15,10 @@
 /* BODY */
 body {
     font-family: Arial, sans-serif;
+    font-size: 16px;
     line-height: 1.6;
     color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 /* HEADER */
@@ -69,6 +71,13 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* ACCESSIBILITY IMPROVEMENT (FOCUS STATES) */
+a:focus,
+button:focus {
+    outline: 3px solid var(--main-color);
+    outline-offset: 2px;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -88,14 +97,13 @@ footer {
         align-items: start;
     }
 
-    /* PSEUDO-ELEMENT */
+    /* REQUIRED PSEUDO-ELEMENT */
     .weather h2::after {
         content: " 🌤️";
     }
 
+
     .weather img {
-        width: 60px;
-        margin: 10px auto;
-        display: block;
+        display: none;
     }
 }
