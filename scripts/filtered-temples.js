@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // TEMPLE ARRAY
+  // TEMPLE DATA
+
   const temples = [
     {
       templeName: "Aba Nigeria",
@@ -67,64 +68,72 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  // DISPLAY FUNCTION
-  const displayTemples = (templesList) => {
-    const container = document.querySelector("#cards");
+  const container = document.querySelector("#cards");
+
+  // HELPER FUNCTION
+
+  const getYear = (dateString) => parseInt(dateString.split(",")[0]);
+
+  // DISPLAY FUNCTION (OPTIMIZED)
+
+  const displayTemples = (list) => {
     container.innerHTML = "";
 
-    templesList.forEach(temple => {
+    const fragment = document.createDocumentFragment();
+
+    list.forEach(({ templeName, location, dedicated, area, imageUrl }) => {
+
       const card = document.createElement("section");
-      card.classList.add("card");
+      card.className = "card";
 
       card.innerHTML = `
-        <h2>${temple.templeName}</h2>
-        <p><strong>Location:</strong> ${temple.location}</p>
-        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-        <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+        <h2>${templeName}</h2>
+        <p><strong>Location:</strong> ${location}</p>
+        <p><strong>Dedicated:</strong> ${dedicated}</p>
+        <p><strong>Area:</strong> ${area.toLocaleString()} sq ft</p>
+        <img 
+          src="${imageUrl}" 
+          alt="${templeName}" 
+          loading="lazy"
+          width="400"
+          height="250"
+        >
       `;
 
-      container.appendChild(card);
+      fragment.appendChild(card);
     });
+
+    container.appendChild(fragment);
   };
 
   // FILTERS
-  const oldTemples = temples.filter(t => parseInt(t.dedicated) < 1900);
-  const newTemples = temples.filter(t => parseInt(t.dedicated) > 2000);
-  const largeTemples = temples.filter(t => t.area > 90000);
-  const smallTemples = temples.filter(t => t.area < 10000);
 
-  // EVENTS
-  document.querySelector("#home").addEventListener("click", (e) => {
-  e.preventDefault();
-  displayTemples(temples);
-});
+  const filters = {
+    home: () => temples,
+    old: () => temples.filter(t => getYear(t.dedicated) < 1900),
+    new: () => temples.filter(t => getYear(t.dedicated) > 2000),
+    large: () => temples.filter(t => t.area > 90000),
+    small: () => temples.filter(t => t.area < 10000)
+  };
 
-document.querySelector("#old").addEventListener("click", (e) => {
-  e.preventDefault();
-  displayTemples(oldTemples);
-});
+  // EVENT LISTENER (CLEAN VERSION)
 
-document.querySelector("#new").addEventListener("click", (e) => {
-  e.preventDefault();
-  displayTemples(newTemples);
-});
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
 
-document.querySelector("#large").addEventListener("click", (e) => {
-  e.preventDefault();
-  displayTemples(largeTemples);
-});
-
-document.querySelector("#small").addEventListener("click", (e) => {
-  e.preventDefault();
-  displayTemples(smallTemples);
-});
+      const filter = link.id;
+      displayTemples(filters[filter]());
+    });
+  });
 
   // FOOTER
+
   document.querySelector("#year").textContent = new Date().getFullYear();
   document.querySelector("#lastModified").textContent = document.lastModified;
 
   // INITIAL LOAD
+
   displayTemples(temples);
 
 });
