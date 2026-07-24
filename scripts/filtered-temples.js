@@ -95,11 +95,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const smallTemples = temples.filter(t => t.area < 10000);
 
   // EVENTS
-  document.querySelector("#home").addEventListener("click", () => displayTemples(temples));
-  document.querySelector("#old").addEventListener("click", () => displayTemples(oldTemples));
-  document.querySelector("#new").addEventListener("click", () => displayTemples(newTemples));
-  document.querySelector("#large").addEventListener("click", () => displayTemples(largeTemples));
-  document.querySelector("#small").addEventListener("click", () => displayTemples(smallTemples));
+  document.querySelector("#home").addEventListener("click", (e) => {
+  e.preventDefault();
+  displayTemples(temples);
+});
+
+document.querySelector("#old").addEventListener("click", (e) => {
+  e.preventDefault();
+  displayTemples(oldTemples);
+});
+
+document.querySelector("#new").addEventListener("click", (e) => {
+  e.preventDefault();
+  displayTemples(newTemples);
+});
+
+document.querySelector("#large").addEventListener("click", (e) => {
+  e.preventDefault();
+  displayTemples(largeTemples);
+});
+
+document.querySelector("#small").addEventListener("click", (e) => {
+  e.preventDefault();
+  displayTemples(smallTemples);
+});
 
   // FOOTER
   document.querySelector("#year").textContent = new Date().getFullYear();
