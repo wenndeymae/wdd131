@@ -65,6 +65,13 @@ document.addEventListener("DOMContentLoaded", () => {
       dedicated: "1984, September, 25",
       area: 26683,
       imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manila-philippines/400x250/manila-philippines-temple-lds-993617-wallpaper.jpg"
+    },
+    {
+      templeName: "Paris France",
+      location: "Paris, France",
+      dedicated: "2017, May, 21",
+      area: 44000,
+      imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/2018/400x250/Paris-Temple02.jpg"
     }
   ];
 
