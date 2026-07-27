@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", Arial, sans-serif;
   margin: 0;
   background-color: var(--secondary-color);
   color: var(--accent-color);
@@ -14,21 +14,21 @@ body {
 
 header {
   background-color: var(--primary-color);
-  color: white;
+  color: #ffffff;
   padding: 1rem;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", Georgia, serif;
 }
 
 main {
   padding: 1rem;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 h2 {
   color: var(--primary-color);
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", Georgia, serif;
 }
 
 section {
@@ -36,15 +36,15 @@ section {
 }
 
 .wireframe {
-  border: 2px dashed #999;
+  border: 2px dashed #999999;
   padding: 1rem;
   margin-top: 1rem;
-  background: white;
+  background-color: #ffffff;
 }
 
 footer {
   text-align: center;
   padding: 1rem;
   background-color: var(--primary-color);
-  color: white;
+  color: #ffffff;
 }
