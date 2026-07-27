@@ -1,17 +1,12 @@
-:root {
-  /* Define global variables */
+html {
   --primary-color: #c8102e;
   --secondary-color: #f5f5f5;
   --accent-color: #333333;
-  --text-light: #ffffff;
-  --border-color: #999999;
 }
 
 body {
-  /* Use fallback stack: Custom Font -> Generic Family */
   font-family: "Noto Sans", sans-serif;
   margin: 0;
-  /* Apply variables for consistency */
   background-color: var(--secondary-color);
   color: var(--accent-color);
   line-height: 1.6;
@@ -19,7 +14,7 @@ body {
 
 header {
   background-color: var(--primary-color);
-  color: var(--text-light);
+  color: #ffffff;
   padding: 1rem;
   text-align: center;
   font-family: "Playfair Display", serif;
@@ -42,15 +37,15 @@ section {
 }
 
 .wireframe {
-  border: 2px dashed var(--border-color);
+  border: 2px dashed #999999;
   padding: 1rem;
   margin-top: 1rem;
-  background-color: var(--text-light); /* Explicit white */
+  background-color: #ffffff;
 }
 
 footer {
   text-align: center;
   padding: 1rem;
   background-color: var(--primary-color);
-  color: var(--text-light);
-}   
+  color: #ffffff;
+}
