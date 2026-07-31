@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit a product review including rating, features, and feedback.">
+  <meta name="author" content="Wenndey Mae Ubatay">
   <title>Product Review Form</title>
   <link rel="stylesheet" href="styles/form.css">
 </head>
@@ -39,9 +41,21 @@
     <!-- Features -->
     <fieldset>
       <legend>Useful Features</legend>
-      <label><input type="checkbox" name="features" value="durable"> Durable</label>
-      <label><input type="checkbox" name="features" value="easy"> Easy to Use</label>
-      <label><input type="checkbox" name="features" value="design"> Good Design</label>
+      <label for="durable">
+        <input type="checkbox" id="durable" name="features" value="durable"> Durable
+      </label>
+
+      <label for="easy">
+        <input type="checkbox" id="easy" name="features" value="easy"> Easy to Use
+      </label>
+
+      <label for="design">
+        <input type="checkbox" id="design" name="features" value="design"> Good Design
+      </label>
+
+      <label for="value">
+        <input type="checkbox" id="value" name="features" value="value"> Good Value
+      </label>
     </fieldset>
 
     <!-- Review -->
@@ -59,9 +73,10 @@
 </main>
 
 <footer>
-  <p>&copy; 2026 Product Review</p>
+  <p>&copy; <span id="year"></span> Wenndey Mae Ubatay, Philippines</p>
+  <p id="lastModified"></p>
 </footer>
 
-<script src="scripts/form.js"></script>
+<script src="scripts/form.js" defer></script>
 </body>
 </html>
