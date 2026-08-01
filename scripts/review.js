@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const product = params.get("product");
   const rating = params.get("rating");
-  const installDate = params.get("installDate");
-  const features = params.getAll("features"); // multiple checkboxes
+  const installDate = params.get("date");
+  const features = params.getAll("features"); 
   const review = params.get("review");
   const username = params.get("username");
 
@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     <p><strong>Name:</strong> ${username || "Anonymous"}</p>
   `;
 
-  // REVIEW COUNTER (localStorage)
   let count = localStorage.getItem("reviewCount");
 
   if (!count) {
