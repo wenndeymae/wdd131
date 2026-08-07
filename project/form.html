@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review a Tour</title>
+
+<link rel="stylesheet" href="form.css">
+<script src="form.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <h1>Review a Japan Tour</h1>
+</header>
+
+<main>
+
+<p><span class="required">*</span> indicates required fields</p>
+
+<form method="get" action="review.html">
+
+<label for="tour">Tour Package <span class="required">*</span></label>
+<select id="tour" name="tour" required>
+  <option value="" disabled selected>Select a Tour</option>
+</select>
+
+<fieldset>
+<legend>Rating <span class="required">*</span></legend>
+
+<input type="radio" name="rating" value="1" required> 1 ⭐
+<input type="radio" name="rating" value="2"> 2 ⭐
+<input type="radio" name="rating" value="3"> 3 ⭐
+<input type="radio" name="rating" value="4"> 4 ⭐
+<input type="radio" name="rating" value="5"> 5 ⭐
+
+</fieldset>
+
+<label for="date">Travel Date <span class="required">*</span></label>
+<input type="date" id="date" name="date" required>
+
+<label for="review">Your Experience</label>
+<textarea id="review" name="review"></textarea>
+
+<label for="name">Your Name</label>
+<input type="text" id="name" name="name">
+
+<input type="submit" value="Submit Review">
+
+</form>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Wenndey Mae Ubatay</p>
+</footer>
+
+</body>
+</html>
