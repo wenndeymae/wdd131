@@ -1,28 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-  const tours = [
-    { name: "Tokyo City Tour", price: "$1200", days: 5 },
-    { name: "Kyoto Cultural Tour", price: "$1000", days: 4 },
-    { name: "Osaka Food Tour", price: "$900", days: 3 }
-  ];
-
   const container = document.getElementById("tour-list");
 
-  if (container) {
+  if (!container) return;
 
-    tours.forEach(tour => {
+  const tours = [
+    { name: "Tokyo Explorer", location: "Tokyo", price: "$1200" },
+    { name: "Kyoto Cultural Tour", location: "Kyoto", price: "$1000" },
+    { name: "Osaka Food Adventure", location: "Osaka", price: "$900" }
+  ];
 
-      const card = document.createElement("div");
-
-      card.innerHTML = `
-        <h3>${tour.name}</h3>
-        <p>Price: ${tour.price}</p>
-        <p>Duration: ${tour.days} days</p>
-      `;
-
-      container.appendChild(card);
-    });
-
+  // EMPTY STATE CHECK
+  if (tours.length === 0) {
+    container.innerHTML = "<p>No tours available.</p>";
+    return;
   }
 
+  // DISPLAY TOURS
+  tours.forEach(tour => {
+    const card = document.createElement("div");
+
+    card.innerHTML = `
+      <h3>${tour.name}</h3>
+      <p><strong>Location:</strong> ${tour.location}</p>
+      <p><strong>Price:</strong> ${tour.price}</p>
+    `;
+
+    container.appendChild(card);
+  });
 });
