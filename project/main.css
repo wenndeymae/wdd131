@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-/* FULL HEIGHT FIX */
+/* ✅ FULL HEIGHT FIX */
 html, body {
   height: 100%;
   margin: 0;
@@ -12,6 +12,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f5f5f5;
 
+  /* ✅ THIS FIXES FOOTER POSITION */
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
@@ -25,59 +26,54 @@ header, footer {
   padding: 1rem;
 }
 
-/* NAVIGATION */
+/* ✅ CENTER MAIN CONTENT */
+main {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+  flex: 1;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* OUTPUT STYLE */
+#output {
+  background: white;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* LINK STYLE */
+a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
 
 nav a:hover {
-  text-decoration: underline;
-}
-
-/* MAIN CONTENT CENTERED */
-main {
-  max-width: 700px;
-  width: 100%;
-  margin: auto;
-  padding: 1rem;
-  text-align: center;
-  flex: 1;
-}
-
-/* IMAGE */
-main img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 6px;
-  margin-top: 1rem;
-}
-
-/* TOUR CARDS */
-#tour-list div {
-  background: white;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 6px;
-  transition: transform 0.2s ease;
-}
-
-#tour-list div:hover {
-  transform: scale(1.02);
-}
-
-/* LINKS */
-a {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #c8102e;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
   text-decoration: underline;
 }
 
